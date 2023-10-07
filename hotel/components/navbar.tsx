@@ -28,6 +28,7 @@ import {
 } from "@/components/icons";
 
 import { Logo } from "@/components/icons";
+import { link, subtitle } from "./primitives";
 
 export const Navbar = () => {
 	const searchInput = (
@@ -52,16 +53,21 @@ export const Navbar = () => {
 	);
 
 	return (
-		<NextUINavbar maxWidth="xl" position="sticky">
+		<NextUINavbar maxWidth="xl" position="sticky" isBlurred>
+			<NavbarBrand>
+				<Logo height={32} width={96} />
+			</NavbarBrand>
 			<NavbarContent className="basis-1/5 sm:basis-full" justify="start">
-				<NavbarBrand className="gap-3 max-w-fit">
-					<NextLink className="flex justify-start items-center gap-1" href="/">
-						<Logo />
-						<p className="font-bold text-inherit">ACME</p>
-					</NextLink>
-				</NavbarBrand>
-				<div className="hidden lg:flex gap-4 justify-start ml-2">
-					<Link>omg juliano hi!!</Link>
+				<div className="hidden lg:flex gap-4 justify-start ml-2 ">
+					<Link className={link()} >Conozcanos</Link>
+					<Link className={link()} >Habitaciones</Link>
+					<Link className={link()}>Restaurante</Link>
+					<Link className={link()}>Ubicacion</Link>
+					<Link className={link()}>Videos</Link>
+					<Link className={link()}>Amigos</Link>
+					<Link className={link()}>Reservas</Link>
+
+
 				</div>
 			</NavbarContent>
 

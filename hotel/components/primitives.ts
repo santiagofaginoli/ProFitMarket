@@ -51,3 +51,9 @@ export const subtitle = tv({
     fullWidth: true
   }
 });
+
+
+
+export const link= tv({
+	base: "text-white font-bold text-base"
+})
