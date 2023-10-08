@@ -55,12 +55,14 @@ export const Navbar = () => {
 	return (
 		<NextUINavbar maxWidth="xl" position="sticky" isBlurred>
 			<NavbarBrand>
-				<Logo height={32} width={96} />
+				<Link href="/">
+					<Logo height={32} width={96} />
+				</Link>
 			</NavbarBrand>
 			<NavbarContent className="basis-1/5 sm:basis-full" justify="start">
 				<div className="hidden lg:flex gap-4 justify-start ml-2 ">
-					<Link className={link()} >Conozcanos</Link>
-					<Link className={link()} >Habitaciones</Link>
+					<Link className={link()} href="/About" as={NextLink}>Conozcanos</Link>
+					<Link className={link()}>Habitaciones</Link>
 					<Link className={link()}>Restaurante</Link>
 					<Link className={link()}>Ubicacion</Link>
 					<Link className={link()}>Videos</Link>
