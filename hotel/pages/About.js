@@ -3,11 +3,11 @@ import DefaultLayout from "@/layouts/default";
 import { Cards } from '../components/card';
 import { Button, Image, Spacer } from '@nextui-org/react';
 import { Reservasection } from '../components/reservasection';
+import { Imgroup } from '../components/imgGroup';
 
-
-export default function About() {
-	return (
-		<DefaultLayout>
+const About = () => {
+  return (
+    <DefaultLayout>
 			
       <div className='flex flex-grow flex-col items-stretch text-center'>
 
@@ -63,5 +63,7 @@ export default function About() {
           </section>
       </div>
 		</DefaultLayout>
-	);
+  )
 }
+
+export default About

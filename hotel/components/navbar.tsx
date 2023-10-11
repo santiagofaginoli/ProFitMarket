@@ -62,12 +62,12 @@ export const Navbar = () => {
 			<NavbarContent className="basis-1/5 sm:basis-full" justify="start">
 				<div className="hidden lg:flex gap-4 justify-start ml-2 ">
 					<Link className={link()} href="/About" as={NextLink}>Conozcanos</Link>
-					<Link className={link()}>Habitaciones</Link>
-					<Link className={link()}>Restaurante</Link>
-					<Link className={link()}>Ubicacion</Link>
-					<Link className={link()}>Videos</Link>
-					<Link className={link()}>Amigos</Link>
-					<Link className={link()}>Reservas</Link>
+					<Link className={link()} href="/Room">Habitaciones</Link>
+					<Link className={link()} href="/Resto">Restaurante</Link>
+					<Link className={link()} href="/Ubi">Ubicacion</Link>
+					<Link className={link()} href="/Vids">Videos</Link>
+					<Link className={link()} href="/">Amigos</Link>
+					<Link className={link()} href="/Booking">Reservas</Link>
 
 
 				</div>

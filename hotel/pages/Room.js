@@ -1,10 +1,12 @@
 import React from 'react'
 
-import React from 'react'
-
+import { Reservasection } from '../components/reservasection'
+import DefaultLayout from "../layouts/default"
 const Room = () => {
   return (
     <div> 
+      <DefaultLayout> 
+
         <h1 className='text-center'>Sientase como en casa</h1>
 
         <section>
@@ -21,16 +23,18 @@ const Room = () => {
                 <li>Internet inalámbrico WI FI</li>
                 <li>Caja de seguridad individual</li>
             </ul>
-            <p>Las Habitaciones pueden ser dobles, triples, o cuádruple y los departamentos, cuádruple o quíntuple, todos poseen amplios placares, y un servicio personalizado de mucama. Contamos con cocheras cubiertas y descubiertas y vigilancia 24 horas.
 
-</p>
+            <p>Las Habitaciones pueden ser dobles, triples, o cuádruple y los departamentos, cuádruple o quíntuple, todos poseen amplios placares, y un servicio personalizado de mucama. Contamos con cocheras cubiertas y descubiertas y vigilancia 24 horas.</p>
+            <p className='text-center font-black '>[Aca iria el componente Imgroup, hay que revisarlo]</p>
+            <Reservasection/>
 
 
         </section>
 
 
 
-    </div>
+     </DefaultLayout>
+  </div>
   )
 }
 
