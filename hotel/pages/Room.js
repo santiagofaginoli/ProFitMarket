@@ -25,7 +25,22 @@ const Room = () => {
             </ul>
 
             <p>Las Habitaciones pueden ser dobles, triples, o cuádruple y los departamentos, cuádruple o quíntuple, todos poseen amplios placares, y un servicio personalizado de mucama. Contamos con cocheras cubiertas y descubiertas y vigilancia 24 horas.</p>
-            <p className='text-center font-black '>[Aca iria el componente Imgroup, hay que revisarlo]</p>
+            <div className='grid grid-cols-6 justify-evenly' >
+
+
+<p>[IMAGEN ACA]</p>
+<p>[IMAGEN ACA]</p>
+<p>[IMAGEN ACA]</p>
+<p>[IMAGEN ACA]</p>
+<p>[IMAGEN ACA]</p>
+<p>[IMAGEN ACA]</p>
+<p>[IMAGEN ACA]</p>
+<p>[IMAGEN ACA]</p>
+<p>[IMAGEN ACA]</p>
+<p>[IMAGEN ACA]</p>
+<p>[IMAGEN ACA]</p>
+<p>[IMAGEN ACA]</p>
+</div>
             <Reservasection/>
 
 

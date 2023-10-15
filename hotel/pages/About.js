@@ -3,7 +3,7 @@ import DefaultLayout from "@/layouts/default";
 import { Cards } from '../components/card';
 import { Button, Image, Spacer } from '@nextui-org/react';
 import { Reservasection } from '../components/reservasection';
-import { Imgroup } from '../components/imgGroup';
+
 
 const About = () => {
   return (
