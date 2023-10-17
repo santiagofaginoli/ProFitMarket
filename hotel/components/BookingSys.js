@@ -46,6 +46,7 @@ export const Bookingsys = () => {
                 />
                 Reserva Completa
               </label>
+              
             </div>
           </div>
         </AccordionItem>

@@ -2,17 +2,18 @@ import React from 'react'
 
 import { Reservasection } from '../components/reservasection'
 import DefaultLayout from "../layouts/default"
+import { title, subtitle } from "@/components/primitives";
 const Room = () => {
   return (
     <div> 
       <DefaultLayout> 
 
-        <h1 className='text-center'>Sientase como en casa</h1>
+        <h1 className={title()}>Sientase como en casa</h1>
 
         <section>
             <h2>Habitaciones</h2>
             <p>Nuestro hotel está pensado para que se encuentre en la comodidad y confort como si fuera su casa. Para ello, contamos con 31 habitaciones y 8 departamentos equipados con:</p>
-            <ul>
+            <ul className='text-center'>
                 <li>Aire acondicionado split</li>
                 <li>Teléfono con discado directo</li>
                 <li>Amplios baños privados</li>

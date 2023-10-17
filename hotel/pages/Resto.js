@@ -1,5 +1,6 @@
 import React from 'react'
 import DefaultLayout from '../layouts/default'
+import { title, subtitle } from "@/components/primitives";
 import { Menudrop } from '../components/menudrop'
 
 const Resto = () => {
@@ -8,7 +9,7 @@ const Resto = () => {
         <DefaultLayout>
           <div> 
 
-            <h1>Restaurante</h1>
+            <h1 className={title()} >Restaurante</h1>
             <section className='flex flex-row'>
             <div className='flex flex-col'>
              <p>El servicio de comida es único en Villa Carlos Paz; le ofrecemos a nuestros clientes un Buffet a Diente Libre.</p>
