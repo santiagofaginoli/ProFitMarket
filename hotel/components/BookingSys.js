@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Accordion, AccordionItem } from '@nextui-org/react';
+import { Accordion, AccordionItem, Button, Spacer } from '@nextui-org/react';
 
 export const Bookingsys = () => {
   const reservas = [
@@ -19,38 +19,26 @@ export const Bookingsys = () => {
   };
 
   return (
-    <Accordion>
-      {reservas.map((reserva, index) => (
-        <AccordionItem key={index} aria-label={`Accordion ${index + 1}`} title={reserva.dia}>
-          <div>
-            <p>Elija una opción:</p>
-            <div className='flex gap-4'>
-              <label className='flex gap-1' >
-                <input
-                  type="radio"
-                  name={`opcion_${index}`}
-                  value="parcial"
-                  checked={selectedOptions[reserva.dia] === 'parcial'}
-                  onChange={() => handleOptionChange(reserva.dia, 'parcial')}
-                />
-                Reserva Parcial
-              </label>
-              
-              <label className='flex gap-1' >
-                <input
-                  type="radio"
-                  name={`opcion_${index}`}
-                  value="completa"
-                  checked={selectedOptions[reserva.dia] === 'completa'}
-                  onChange={() => handleOptionChange(reserva.dia, 'completa')}
-                />
-                Reserva Completa
-              </label>
-              
-            </div>
-          </div>
-        </AccordionItem>
-      ))}
-    </Accordion>
+    <div >
+      <p>aaaa</p>
+      <div >
+        <label for="fecha-inicio" className='mr-2'>Fecha de inicio:</label>
+        <input type="date" id="fecha-inicio" name="fecha-inicio" required className='rounded-lg p-2'/>
+      </div>
+      <Spacer y={2} />
+
+
+      <div>
+        <label for="fecha-fin" className='mr-2'>Fecha de fin:</label>
+        <input type="date" id="fecha-fin" name="fecha-fin" required className='rounded-lg p-2'/>
+      </div>
+      <Spacer y={2} />
+
+      <div>
+        <label for="cantidad-personas" className='mr-2'>Cantidad de personas:</label>
+        <input type="number" id="cantidad-personas" name="cantidad-personas" min="1" required className='rounded-lg p-2'/>  
+      </div>
+      <Button type='submit' color='primary'> Reservar </Button>
+    </div>
   );
 };
