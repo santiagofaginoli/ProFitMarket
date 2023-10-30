@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Accordion, AccordionItem, Button, Spacer } from '@nextui-org/react';
+import { Button, Spacer,Table, TableHeader, TableBody, TableColumn, TableRow, TableCell } from '@nextui-org/react';
 
 export const Bookingsys = () => {
   const [cantidadPersonas, setCantidadPersonas] = useState('');
@@ -58,17 +58,29 @@ export const Bookingsys = () => {
       <Button id="mostrar-boton" type="submit" color="primary" onClick={agregarReserva}>
         Reservar
       </Button>
-      <p>{resultado}</p>
 
       <div>
-        <h2>Reservas:</h2>
-        <ul>
-          {reservas.map((reserva) => (
-            <li key={reserva.id}>
-              Reserva #{reserva.id} - Habitación {reserva.habitacion} - Personas: {reserva.cantidadPersonas} - Desde: {reserva.fechaInicio} Hasta: {reserva.fechaFin}
-            </li>
-          ))}
-        </ul>
+        <h2 className='text-center font-bold'>Reservas</h2>
+        <Table aria-label="Reservas table">
+          <TableHeader>
+            <TableColumn>ID</TableColumn>
+            <TableColumn>Fecha de Inicio</TableColumn>
+            <TableColumn>Fecha de Fin</TableColumn>
+            <TableColumn>Habitación</TableColumn>
+            <TableColumn>Cantidad de Personas</TableColumn>
+          </TableHeader>
+          <TableBody>
+            {reservas.map((reserva) => (
+              <TableRow key={reserva.id}>
+                <TableCell>{reserva.id}</TableCell>
+                <TableCell>{reserva.fechaInicio}</TableCell>
+                <TableCell>{reserva.fechaFin}</TableCell>
+                <TableCell>{reserva.habitacion}</TableCell>
+                <TableCell>{reserva.cantidadPersonas}</TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
       </div>
     </div>
   );
