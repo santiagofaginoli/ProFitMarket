@@ -46,43 +46,82 @@ export const Bookingsys = () => {
 
   return (
     <div>
-      <div>
-        <label htmlFor="fecha-inicio" className="mr-2">
-          Fecha de inicio:
-        </label>
-        <input type="date" id="fecha-inicio" name="fecha-inicio" value={fechaInicio} onChange={(e) => setFechaInicio(e.target.value)} required className="rounded-lg p-2" />
-      </div>
-      <Spacer y={2} />
+      <div className="flex flex-col space-y-4">
+        <div className="flex flex-col space-y-2">
+          <label htmlFor="fecha-inicio" className="text-gray-700 font-semibold">
+            Fecha de inicio:
+          </label>
+          <input
+            type="date"
+            id="fecha-inicio"
+            name="fecha-inicio"
+            value={fechaInicio}
+            onChange={(e) => setFechaInicio(e.target.value)}
+            required
+            className="rounded-lg p-2 border border-gray-300 focus:outline-none focus:border-blue-500"
+          />
+        </div>
 
-      <div>
-        <label htmlFor="fecha-fin" className="mr-2">
-          Fecha de fin:
-        </label>
-        <input type="date" id="fecha-fin" name= "fecha-fin" value={fechaFin} onChange={(e) => setFechaFin(e.target.value)} required className="rounded-lg p-2" />
-      </div>
-      <Spacer y={2} />
+        <div className="flex flex-col space-y-2">
+          <label htmlFor="fecha-fin" className="text-gray-700 font-semibold">
+            Fecha de fin:
+          </label>
+          <input
+            type="date"
+            id="fecha-fin"
+            name="fecha-fin"
+            value={fechaFin}
+            onChange={(e) => setFechaFin(e.target.value)}
+            required
+            className="rounded-lg p-2 border border-gray-300 focus:outline-none focus:border-blue-500"
+          />
+        </div>
 
-      <div>
-        <label htmlFor="cantidad-personas" className="mr-2">
-          Cantidad de personas:
-        </label>
-        <input type="number" id="cantidad-personas" name="cantidad-personas" value={cantidadPersonas} onChange={(e) => setCantidadPersonas(e.target.value)} min="1" max="5" required className="rounded-lg p-2" />
-      </div>
-      <Spacer y={2} />
-      <div>
-        <label htmlFor="habitacion-elegida" className="mr-2">
-          Número de Habitación:
-        </label>
-        <input type="number" id="habitacion-elegida" name="habitacion-elegida" value={habitacionElegida} onChange={(e) => setHabitacionElegida(e.target.value)} min="1" max="51" required className="rounded-lg p-2" />
-      </div>
-      <Button id="mostrar-boton" type="submit" color="primary" onClick={agregarReserva}>
-        Reservar
-      </Button>
+        <div className="flex flex-col space-y-2">
+          <label htmlFor="cantidad-personas" className="text-gray-700 font-semibold">
+            Cantidad de personas:
+          </label>
+          <input
+            type="number"
+            id="cantidad-personas"
+            name="cantidad-personas"
+            value={cantidadPersonas}
+            onChange={(e) => setCantidadPersonas(e.target.value)}
+            min="1"
+            max="5"
+            required
+            className="rounded-lg p-2 border border-gray-300 focus:outline-none focus:border-blue-500"
+          />
+        </div>
 
-      <div>
+        <div className="flex flex-col space-y-2">
+          <label htmlFor="habitacion-elegida" className="text-gray-700 font-semibold">
+            Número de Habitación:
+          </label>
+          <input
+            type="number"
+            id="habitacion-elegida"
+            name="habitacion-elegida"
+            value={habitacionElegida}
+            onChange={(e) => setHabitacionElegida(e.target.value)}
+            min="1"
+            max="51"
+            required
+            className="rounded-lg p-2 border border-gray-300 focus:outline-none focus:border-blue-500"
+          />
+        </div>
+
+        <button
+          id="mostrar-boton"
+          type="submit"
+          onClick={agregarReserva}
+          className="bg-blue-500 text-white rounded-lg p-2 hover:bg-blue-600 focus:outline-none"
+        >
+          Reservar
+        </button> 
+
         {mensajeError && <div className="text-red-500">{mensajeError}</div>}
-      </div>
-
+    </div>
       <h2 className='text-center font-bold'>Reservas</h2>
       <Table aria-label="Reservas table">
         <TableHeader>
