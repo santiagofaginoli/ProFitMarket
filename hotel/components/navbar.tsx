@@ -57,7 +57,7 @@ export const Navbar = () => {
 				</Link>
 			</NavbarBrand>
 			<NavbarContent className="basis-1/5 sm:basis-full" justify="start">
-				<div className="hidden lg:flex gap-4 justify-start ml-2 ">
+				<div className="hidden lg:flex gap-4 justify-start ml-2 nav-container">
 					<Link className={link()} href="/About" as={NextLink}>Conozcanos</Link>
 					<Link className={link()} href="/Room">Habitaciones</Link>
 					<Link className={link()} href="/Resto">Restaurante</Link>
@@ -65,44 +65,12 @@ export const Navbar = () => {
 					<Link className={link()} href="/Vids">Videos</Link>
 					<Link className={link()} href="/">Amigos</Link>
 					<Link className={link()} href="/Booking">Reservas</Link>
-
-
+					
 				</div>
 			</NavbarContent>
-
-      <NavbarContent className="hidden sm:flex basis-1/5 sm:basis-full" justify="end">
-				<NavbarItem className="hidden sm:flex gap-2">
-					<ThemeSwitch />
-				</NavbarItem>
-				<NavbarItem className="hidden lg:flex">{searchInput}</NavbarItem>
-				<NavbarItem className="hidden md:flex">
-					<Button
-						isExternal
-						as={Link}
-						className="text-sm font-normal text-default-600 bg-default-100"
-						href={siteConfig.links.sponsor}
-						startContent={<HeartFilledIcon className="text-danger" />}
-						variant="flat"
-					>
-						Sponsor
-					</Button>
-				</NavbarItem>
+			<NavbarContent className="basis-1/5 sm:basis-full" justify="end">
+				<ThemeSwitch />
 			</NavbarContent>
-
-			<NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
-        <Link isExternal href={siteConfig.links.github}>
-        </Link>
-        <ThemeSwitch />
-				<NavbarMenuToggle />
-      </NavbarContent>
-
-      <NavbarMenu>
-          <NavbarMenuItem>
-            <Link
-            >Hola
-            </Link>
-          </NavbarMenuItem>
-      </NavbarMenu>
 		</NextUINavbar>
 	);
 };

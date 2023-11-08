@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+/* Primary color */
+.text-primary, svg  {
+    color: rgb(219, 33, 33);
+}
+
+.button-reserva{
+    background-color: rgb(219, 33, 33);
+}
+
+.text-gray-700{
+    color: rgb(139, 139, 139);
+}
+

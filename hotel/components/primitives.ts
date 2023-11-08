@@ -55,5 +55,5 @@ export const subtitle = tv({
 
 
 export const link= tv({
-	base: "text-white font-bold text-base"
+	base: "font-bold text-base"
 })

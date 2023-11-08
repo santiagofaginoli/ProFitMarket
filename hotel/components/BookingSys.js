@@ -115,7 +115,7 @@ export const Bookingsys = () => {
           id="mostrar-boton"
           type="submit"
           onClick={agregarReserva}
-          className="bg-blue-500 text-white rounded-lg p-2 hover:bg-blue-600 focus:outline-none"
+          className="bg-blue-500 text-white rounded-lg p-2 hover:bg-blue-600 focus:outline-none button-reserva"
         >
           Reservar
         </button> 

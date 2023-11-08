@@ -2,12 +2,13 @@ import React from 'react'
 import DefaultLayout from '../layouts/default'
 import { Bookingsys } from '../components/BookingSys'
 
+
 const Booking = () => {
   return (
     <div>
         <DefaultLayout>
-            <h1> Reservas</h1>
-            <p>Haz tu reserva en la tabla de abajo!!</p>
+            <p className='text-2xl text-center font-bold'> Reservas</p>
+            <p>Para registrar tu reserva, llena los datos del formulario!!</p>
             <Bookingsys/>
 
           
