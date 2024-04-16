@@ -1,8 +1,8 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-	name: "Hotel Aranjuez",
-	description: "El mejor hotel para tu familia",
+	name: "ExpoSaber",
+	description: "Una exposicion hecha por alumnos para alumnos.",
 	navItems: [
 		{
 			label: "Home",
