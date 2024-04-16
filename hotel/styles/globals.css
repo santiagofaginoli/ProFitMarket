@@ -3,16 +3,9 @@
 @tailwind utilities;
 
 
-/* Primary color */
-.text-primary, svg  {
-    color: rgb(219, 33, 33);
+#fondo{
+ opacity: 30%;
 }
-
-.button-reserva{
-    background-color: rgb(219, 33, 33);
+.acordion{
+  max-width: 80%;
 }
-
-.text-gray-700{
-    color: rgb(139, 139, 139);
-}
-
